@@ -1,7 +1,9 @@
-const url = 'http://striveschool-api.herokuapp.com/api/deezer/search?q=eminem';
+const url_eminem = 'http://striveschool-api.herokuapp.com/api/deezer/search?q=eminem';
+const url_metallica = 'http://striveschool-api.herokuapp.com/api/deezer/search?q=metallica';
+const url_queen = 'http://striveschool-api.herokuapp.com/api/deezer/search?q=queen';
 
 const fetchEminem = () => {
-    fetch(url, {method: "GET",
+    fetch(url_eminem, {method: "GET",
 }).then((response)=>{
     //console.log(response);
     return response.json();
@@ -17,6 +19,12 @@ for (let i = 0; i < brani.length; i++) {
                          </div>
     `
 }
+const eminemClass = document.querySelector('#eminem')
+console.log(eminemClass);
+eminemClass.classList.toggle('d-none')
 })
+
 }
-fetchEminem();
+//fetchEminem();
+const creaLista = document.querySelector('#creaLista')
+creaLista.onclick = fetchEminem
