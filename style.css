@@ -7,7 +7,12 @@ body {
     rgb(15, 21, 29) 100%
   );
 }
-
+*{
+  object-fit: cover;
+}
+h2,h5, h4, h6{
+  color: greenyellow;
+}
 /*SIDEBAR SECTION*/
 .navbar.fixed-left {
   position: fixed;
